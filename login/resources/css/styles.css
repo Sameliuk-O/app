@@ -1,0 +1,129 @@
+body {
+    background: #fff !important;
+    font-family: "Inter", sans-serif;
+}
+
+.pf-v5-c-login__main {
+    width: 80%;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    @media (min-width: 624px) {
+        width: 480px;
+    }
+}
+
+.login-pf-page-header {
+    display: none;
+}
+
+.pf-v5-c-login__main {
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.pf-v5-c-title {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    text-align: center;
+    color: #000000;
+
+    @media (min-width: 624px) {
+        font-size: 30px !important;
+    }
+}
+
+input {
+    height: 44px !important;
+    border: 1px solid #707070 !important;
+    border-radius: 15px;
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+input#password, input#password-confirm {
+    padding-right: 50px;
+}
+
+.pf-v5-c-button.pf-m-control{
+    margin-left: -50px;
+    background-color: transparent !important;
+}
+
+.pf-v5-c-button:after {
+    border: none;
+}
+
+.pf-v5-c-form-control:after, .pf-v5-c-form-control:before{
+    border: none;
+}
+
+.pf-v5-c-form__label-required {
+    display: none;
+}
+
+.pf-v5-c-form__label {
+    margin-left: 10px;
+}
+
+.pf-v5-c-form__label-text {
+    font-weight: normal;
+}
+
+.subtitle {
+    display: none;
+}
+
+:where(a) {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    color: #128200!important;
+
+}
+
+.pf-v5-c-button.pf-m-primary.pf-m-block {
+    border: 1px solid #9a9a9a;
+    border-radius: 12px;
+    padding: 0 20px;
+    background: #e1e1e1;
+    font-weight: 400;
+    font-size: 20px;
+    color: #9a9a9a;
+    cursor: pointer;
+}
+
+.pf-v5-c-button.pf-m-primary:hover {
+    background: #e6eece !important;
+}
+
+.checkbox input {
+    height: auto !important;
+}
+
+#kc-info-wrapper {
+    background-color: transparent !important;
+}
+
+#kc-registration {
+    font-size: 16px !important;
+}
+
+.pf-v5-c-login__main-header {
+    padding: 32px 16px 0 16px;
+
+    @media (min-width: 624px) {
+        padding: 32px 32px 0 32px;
+    }
+}
+
+.pf-v5-c-login__main-body {
+    padding: 0 16px 32px 16px;
+
+    @media (min-width: 624px) {
+        padding: 0 32px 32px 32px;
+    }
+}

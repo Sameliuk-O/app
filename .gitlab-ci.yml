@@ -1,0 +1,28 @@
+image: node:latest
+
+variables:
+  FRONT_END_URL: $FRONT_END_URL
+  BACK_END_URL: $BACK_END_URL
+  POSTGRES_DATABASE: $POSTGRES_DATABASE
+  POSTGRES_HOST: $POSTGRES_HOST
+  POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+  POSTGRES_PORT: $POSTGRES_PORT
+  POSTGRES_USERNAME: $POSTGRES_USERNAME
+  KEYCLOAK_CLIENT_ID: $KEYCLOAK_CLIENT_ID
+  KEYCLOAK_REALM: $KEYCLOAK_REALM
+  KEYCLOAK_URL: $KEYCLOAK_URL
+
+stages:
+  - create_env_file
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - cd server
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - server/

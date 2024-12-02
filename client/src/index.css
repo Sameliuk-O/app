@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Mariupol';
+    src: url('../public/fonts/Mariupol-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mariupol';
+    src: url('../public/fonts/Mariupol-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mariupol';
+    src: url('../public/fonts/MariupolSymbols.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mariupol';
+    src: url('../public/fonts/Mariupol-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+@layer utilities {
+    .focus-ring-brand {
+        @apply focus:outline-none focus:ring-2 focus:ring-brand300;
+    }
+
+    .focus-ring-brand:focus-visible {
+        @apply ring-2 ring-brand300 border-transparent;
+    }
+
+    .focus-ring-brand:focus:not(:focus-visible) {
+        @apply ring-0;
+    }
+
+    .onboarding {
+        h4 {
+            @apply text-xl text-gray800 font-bold
+        }
+
+        span {
+            @apply text-lg text-gray600
+        }
+
+        button {
+            @apply focus-ring-brand text-gray600 font-medium
+        }
+
+        svg {
+            @apply hidden
+        }
+
+        button:last-child {
+            @apply bg-brand400  hover:bg-brand300 border-0
+        }
+
+        button:last-child span {
+            @apply text-white
+        }
+    }
+}
+
